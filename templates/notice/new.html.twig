@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajout annonce{% endblock %}
+
+{% block body %}
+    <h1>Ajout d'une annonce</h1>
+
+    <div class="container">{{ include('notice/_form.html.twig') }}</div>
+
+    <a href="{{ path('app_notice_index') }}">back to list</a>
+{% endblock %}

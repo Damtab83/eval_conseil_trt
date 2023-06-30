@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Annonces{% endblock %}
+
+{% block body %}
+    <h1 class="text-center mt-4">Annonces</h1>
+
+    <table class="table container">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Location</th>
+                <th>Salary</th>
+                <th>Schedule</th>
+                <th>CreatedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for notice in notices %}
+            <tr>
+                <td>{{ notice.id }}</td>
+                <td>{{ notice.title }}</td>
+                <td>{{ notice.description }}</td>
+                <td>{{ notice.location }}</td>
+                <td>{{ notice.salary }}</td>
+                <td>{{ notice.schedule }}</td>
+                <td>{{ notice.createdAt ? notice.createdAt|date('d-m-Y') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_notice_show', {'id': notice.id}) }}">show</a>
+                    <a href="{{ path('app_notice_edit', {'id': notice.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <p class="d-flex justify-content-end mr-4">
+        <a href="{{ path('app_notice_new') }}" class="btn btn-info">Ajouter une annonce</a>
+    </p>
+{% endblock %}

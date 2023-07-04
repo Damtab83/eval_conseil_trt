@@ -12,8 +12,7 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					{# <a class="nav-link" href="{{ path('app_notice') }}">Annonces #}
-					<a>Link 1
+					<a class="nav-link" href="{{ path('app_notice_index') }}">Annonces
 					</a>
 				</li>
 
@@ -22,7 +21,7 @@
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mon Compte</a>
 							<div class="dropdown-menu">
-								{# <a class="dropdown-item" href="{{ path('app_user', {id : app.user.id}) }}">Modifier mes informations</a> #}
+								<a class="dropdown-item" href="{{ path('app_user_index', {id : app.user.id}) }}">Modifier mes informations</a>
 								{# <a class="dropdown-item" href="{{ path('app_edit-password', {id : app.user.id}) }}">Modifier mot de passe</a> #}
 								<a>Link A</a>
 								<a>Link B</a>

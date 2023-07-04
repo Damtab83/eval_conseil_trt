@@ -97,19 +97,6 @@ class NoticeType extends AbstractType
                     new Assert\Length(['min' => 4, 'max' => 50]),
                 ]
             ])
-            // ->add('createdAt', DateTimeType::class, [
-            //     'label' => 'Date de création',
-            //     'label_attr' => [
-            //         'class' => 'form-label mt-4'
-            //     ],
-            //     'attr' => [
-            //         'class' => 'form-control',
-            //     ],
-            //     'constraints' => [
-            //         new Assert\NotBlank(message: 'Une date de création doit être indiquer'),
-            //     ]
-            // ])
-            ->add('recruteur')
         ;
     }
 
